@@ -19,32 +19,29 @@ Algoritmo JugueteriaVirtual
 		Escribir '¿Le gustaría saber el precio? (Si/No): '
 		Leer precioRespuesta
 		precioRespuesta <- Mayusculas(precioRespuesta)
-	 Si precioRespuesta='SI' Entonces
-	     Escribir 'Precio del Producto 1: $15800'
+		Si precioRespuesta='SI' Entonces
+			Escribir 'Precio del Producto 1: $15800'
 			Escribir 'Precio del Producto 2: $18000'
 			Escribir 'Precio del Producto 3: $14800'
-			
-		FinSi 
-		
-	   Escribir '¿Desea realizar la compra de alguno de los productos ofrecidos? (Si/No): '
-	   Leer realizarCompraProductos
-	   realizarCompraProductos <- Mayusculas(realizarCompraProductos)
-	   
-		Si realizarCompraProductos ='SI' Entonces
+		FinSi
+		Escribir '¿Desea realizar la compra de alguno de los productos ofrecidos? (Si/No): '
+		Leer realizarCompraProductos
+		realizarCompraProductos <- Mayusculas(realizarCompraProductos)
+		Si realizarCompraProductos='SI' Entonces
 			Escribir 'Por favor, seleccione un producto:'
 			Escribir '1.Monopoly Electronico - Juego familiar '
 			Escribir '2. Teg Conquista - Juego de estrategia '
 			Escribir '3. Simon Memory - Juego de memoria '
 			Leer producto
 			Según producto Hacer
-		        '1':
+				'1':
 					precio <- 15800
 				'2':
 					precio <- 18000
 				'3':
 					precio <- 14800
 				De Otro Modo:
-				 Escribir 'Producto no válido.'
+					Escribir 'Producto no válido.'
 			FinSegún
 		FinSi
 		Escribir 'Seleccione una opción de envío:'
@@ -66,13 +63,13 @@ Algoritmo JugueteriaVirtual
 				Escribir '¿Desea realizar otra compra? (Si/No): '
 				Leer realizarOtraCompra
 				realizarOtraCompra <- Mayusculas(realizarOtraCompra)
-				 Mientras realizarOtraCompra='Si' Hacer
+				Mientras realizarOtraCompra='Si' Hacer
 					Escribir 'Por favor, seleccione un producto:'
 					Escribir '1. Monopoly Electronico - Juego familiar'
 					Escribir '2. Teg Conquista - Juego de estrategia'
 					Escribir '3. Simon Memory - Juego de memoria'
 					Leer producto
-				 FinMientras
+				FinMientras
 			FinSi
 			Escribir 'El total a pagar por su compra con envío es: $', total
 			Escribir 'Perfecto, su compra se ha generado con éxito.'
